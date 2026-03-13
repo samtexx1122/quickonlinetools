@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Reverser</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+padding:30px;
+}
+
+textarea{
+width:90%;
+height:120px;
+margin:10px;
+padding:10px;
+font-size:16px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+font-size:16px;
+}
+
+#result{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Text Reverser</h2>
+
+<textarea id="text" placeholder="Enter text"></textarea>
+
+<br>
+
+<button onclick="reverseText()">Reverse Text</button>
+
+<div id="result"></div>
+
+<script>
+
+function reverseText(){
+
+let text=document.getElementById("text").value;
+
+let reversed=text.split("").reverse().join("");
+
+document.getElementById("result").innerHTML=reversed;
+
+}
+
+</script>
+
+</body>
+</html>
