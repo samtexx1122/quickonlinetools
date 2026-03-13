@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Number Generator</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+padding:30px;
+}
+
+input{
+padding:10px;
+margin:5px;
+width:120px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+font-size:16px;
+}
+
+#result{
+font-size:22px;
+margin-top:20px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Random Number Generator</h2>
+
+<p>Enter Range</p>
+
+<input type="number" id="min" placeholder="Min">
+<input type="number" id="max" placeholder="Max">
+
+<br>
+
+<button onclick="generate()">Generate</button>
+
+<div id="result"></div>
+
+<script>
+
+function generate(){
+
+let min=parseInt(document.getElementById("min").value);
+let max=parseInt(document.getElementById("max").value);
+
+let random=Math.floor(Math.random()*(max-min+1))+min;
+
+document.getElementById("result").innerHTML=random;
+
+}
+
+</script>
+
+</body>
+</html>
