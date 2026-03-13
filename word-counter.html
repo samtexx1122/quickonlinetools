@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Word Counter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+background:#f4f4f4;
+padding:20px;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+textarea{
+width:90%;
+height:120px;
+padding:10px;
+}
+
+button{
+background:#0077ff;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Word Counter</h2>
+
+<div class="box">
+
+<textarea id="text" placeholder="Type or paste your text here"></textarea>
+
+<br><br>
+
+<button onclick="countWords()">Count Words</button>
+
+<h3 id="result"></h3>
+
+</div>
+
+<script>
+
+function countWords(){
+
+let text=document.getElementById("text").value;
+
+let words=text.trim().split(/\s+/).length;
+
+document.getElementById("result").innerHTML="Words: "+words;
+
+}
+
+</script>
+
+</body>
+</html>
